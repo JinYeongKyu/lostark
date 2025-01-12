@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jin.project.mapper.BoardMapper">
+
+    <select id="getAllBoard" resultType="com.jin.project.model.BoardDTO">
+        SELECT b.board_no as boardNo,
+               b.board_title as boardTitle,
+               m.name,
+               b.board_created_at as boardCreatedAt,
+               b.board_updated_at as boardUpdatedAt
+        FROM board b
+            JOIN member m ON b.board_member = m.id
+        ORDER BY b.board_no DESC
+    </select>
+
+</mapper>
