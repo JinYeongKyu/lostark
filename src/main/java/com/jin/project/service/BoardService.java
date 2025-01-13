@@ -15,4 +15,8 @@ public class BoardService {
     public List<BoardDTO> getAllBoard() {
         return boardMapper.getAllBoard();
     }
+
+    public BoardDTO getSelectBoard(Long id) {
+        return boardMapper.getSelectBoard(id);
+    }
 }

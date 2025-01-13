@@ -17,9 +17,9 @@
           {{ notice.boardNo }}
         </td>
         <td>
-          <a href="#" class="text-decoration-none text-dark">
+          <router-link :to="`/board/detail/${notice.boardNo}`" class="text-decoration-none text-dark">
             {{ notice.boardTitle }}
-          </a>
+          </router-link>
         </td>
         <td>{{ notice.name }}</td>
         <td>{{ formatDate(notice.boardUpdatedAt) }}</td>

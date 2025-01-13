@@ -14,4 +14,17 @@
         ORDER BY b.board_no DESC
     </select>
 
+    <select id="getSelectBoard" resultType="com.jin.project.model.BoardDTO">
+        SELECT b.board_no as boardNo,
+               b.board_title as boardTitle,
+               b.board_content as boardContent,
+               m.name,
+               b.board_created_at as boardCreatedAt,
+               b.board_updated_at as boardUpdatedAt
+        FROM board b
+                 JOIN member m ON b.board_member = m.id
+        where b.board_no = #{id}
+        ORDER BY b.board_no DESC
+    </select>
+
 </mapper>

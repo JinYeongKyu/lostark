@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginPage from "@/views/LoginPage.vue"; // 내가 만들어준 로그인 컴포넌트 경로
 import MainPage from '@/views/MainPage.vue'
 import FreeBoard from "@/views/FreeBoard.vue";
+import BoardDetail from "@/views/BoardDetail.vue";
 import axios from "axios";
 
 const routes = [
@@ -19,6 +20,12 @@ const routes = [
         path: "/board",
         name: "board",
         component: FreeBoard, // 로그인 컴포넌트
+        meta: { requiresAuth: true }
+    },
+    {
+        path: "/board/detail/:id",
+        name: "boardDetail",
+        component: BoardDetail,
         meta: { requiresAuth: true }
     },
 ];
