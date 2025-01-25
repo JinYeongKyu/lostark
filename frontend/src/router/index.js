@@ -3,6 +3,7 @@ import LoginPage from "@/views/LoginPage.vue"; // 내가 만들어준 로그인 
 import MainPage from '@/views/MainPage.vue'
 import FreeBoard from "@/views/FreeBoard.vue";
 import BoardDetail from "@/views/BoardDetail.vue";
+import CreateBoard from '@/views/CreateBoard.vue'; // 게시물 등록 컴포넌트
 import axios from "axios";
 
 const routes = [
@@ -28,6 +29,11 @@ const routes = [
         component: BoardDetail,
         meta: { requiresAuth: true }
     },
+    {
+        path: '/board/create',
+        name: 'CreatePost',
+        component: CreateBoard
+    }
 ];
 
 const router = createRouter({

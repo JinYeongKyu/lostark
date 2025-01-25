@@ -27,8 +27,14 @@
         ORDER BY b.board_no DESC
     </select>
 
-    <delete id="deleteBoard" parameterType="long">
-        DELETE FROM board WHERE board_no = #{id}
+    <delete id="deleteBoard">
+        DELETE FROM board WHERE board_no = #{id} <!-- 삭제 쿼리 수정 -->
     </delete>
+
+    <insert id="createPost" parameterType="com.jin.project.model.BoardDTO">
+        INSERT INTO board (board_title, board_content, board_member)
+        VALUES (#{boardTitle}, #{boardContent},
+                (SELECT id FROM member WHERE name = #{name}))
+    </insert>
 
 </mapper>

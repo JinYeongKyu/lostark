@@ -12,4 +12,6 @@ public interface BoardMapper {
     BoardDTO getSelectBoard(Long id);
 
     void deleteBoard(Long id);
+
+    void createPost(BoardDTO boardDTO);
 }

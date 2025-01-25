@@ -28,4 +28,9 @@ public class BoardController {
     public void deleteBoard(@PathVariable("id") Long id) {
         boardService.deleteBoard(id);
     }
+
+    @PostMapping("/board/create")
+    public void createPost(@RequestBody BoardDTO boardDTO) {
+        boardService.createPost(boardDTO); // 게시물 등록 서비스 호출
+    }
 }
