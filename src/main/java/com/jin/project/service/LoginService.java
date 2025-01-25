@@ -20,11 +20,11 @@ public class LoginService {
         if (member != null && password.equals(member.getPassword())) {
             result.put("success", true);
             result.put("name", member.getName());  // 사용자 이름을 반환
-        } else {
+        }
+        else {
             result.put("success", false);
             result.put("name", null);  // 로그인 실패 시 이름은 null
         }
-
         return result;
     }
 }

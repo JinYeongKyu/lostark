@@ -19,4 +19,8 @@ public class BoardService {
     public BoardDTO getSelectBoard(Long id) {
         return boardMapper.getSelectBoard(id);
     }
+
+    public void deleteBoard(Long id) {
+        boardMapper.deleteBoard(id);
+    }
 }

@@ -27,4 +27,8 @@
         ORDER BY b.board_no DESC
     </select>
 
+    <delete id="deleteBoard" parameterType="long">
+        DELETE FROM board WHERE board_no = #{id}
+    </delete>
+
 </mapper>

@@ -1,7 +1,10 @@
 <template>
   <TopNavbar />
-  <div class="container-sm mt-4">
-    <h2 class="mb-4">자유게시판</h2>
+  <div class="container mt-4">
+    <div class="card-body d-flex justify-content-between align-items-center">
+      <h2 class="mb-4">자유게시판</h2>
+      <router-link to="/board/create" class="btn btn-primary">게시물 등록</router-link>
+    </div>
     <table class="table">
       <thead>
       <tr>
@@ -46,17 +49,14 @@
       </li>
     </ul>
   </nav>
-  <AppFooter />
 </template>
 
 <script>
 import TopNavbar from "@/components/TopNavbar.vue";
-import AppFooter from "@/components/AppFooter.vue";
 import axios from "axios";
 
 export default {
   components: {
-    AppFooter,
     TopNavbar
   },
   data() {
@@ -98,9 +98,8 @@ export default {
   vertical-align: middle;
 }
 
-.container-sm {
-  max-width: 1000px;  /* 테이블 전체 최대 너비 제한 */
+.container {
   margin: 0 auto;
-  min-height: 500px;
+  min-height: 700px;
 }
 </style>

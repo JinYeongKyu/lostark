@@ -10,4 +10,6 @@ public interface BoardMapper {
     List<BoardDTO> getAllBoard();
 
     BoardDTO getSelectBoard(Long id);
+
+    void deleteBoard(Long id);
 }

@@ -6,11 +6,11 @@ import java.time.LocalDateTime;
 
 @Data
 public class BoardDTO {
-    private Long boardNo;          // 게시글 번호
-    private String boardTitle;     // 게시글 제목
+    private Long boardNo;
+    private String boardTitle;
     private String boardContent;
-    private String name;// 게시글 내용
-    private Long boardMember;      // 작성자 ID
-    private LocalDateTime boardCreatedAt; // 생성일
-    private LocalDateTime boardUpdatedAt; // 수정일
+    private String name;
+    private Long boardMember;
+    private LocalDateTime boardCreatedAt;
+    private LocalDateTime boardUpdatedAt;
 }
